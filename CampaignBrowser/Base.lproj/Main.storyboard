@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HoeflerText.ttc">
+            <string>HoeflerText-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Campaign Listing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -33,17 +42,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3t-mf-lUQ">
-                                            <rect key="frame" x="8" y="8" width="359" height="267"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiC-pw-PH8" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="202.5" width="60.5" height="36.5"/>
+                                            <rect key="frame" x="0.0" y="210.5" width="60.5" height="36.5"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKV-MD-vzF" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="239" width="359" height="28"/>
+                                            <rect key="frame" x="0.0" y="247" width="375" height="28"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <edgeInsets key="layoutMargins" top="8" left="20" bottom="8" right="8"/>
                                             <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="12"/>
@@ -77,7 +86,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="o42-h4-YUU">
+                                        <activityIndicatorView opaque="NO" tag="20" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="o42-h4-YUU">
                                             <rect key="frame" x="169" y="94.5" width="37" height="37"/>
                                             <color key="color" red="0.32549019610000002" green="0.68627450980000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </activityIndicatorView>
@@ -89,11 +98,43 @@
                                 </constraints>
                                 <size key="customSize" width="375" height="225"/>
                             </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="errorCell" id="2u1-RV-sLQ">
+                                <rect key="frame" x="0.0" y="528" width="375" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There was an error. Please check your internet connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf7-Hd-9Ti" customClass="LabelWithPadding" customModule="CampaignBrowser" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="73" width="335" height="57"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6f-PG-hLW">
+                                            <rect key="frame" x="147" y="149.5" width="80" height="35"/>
+                                            <color key="backgroundColor" red="0.32549019610000002" green="0.68627450980000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="8qh-Q1-MVS"/>
+                                                <constraint firstAttribute="height" constant="35" id="CCw-eZ-n0J"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <state key="normal" title="retry"/>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Cf7-Hd-9Ti" firstAttribute="leading" secondItem="2u1-RV-sLQ" secondAttribute="leading" constant="20" id="4DV-4Z-I3v"/>
+                                    <constraint firstItem="y6f-PG-hLW" firstAttribute="centerX" secondItem="2u1-RV-sLQ" secondAttribute="centerX" id="8Fj-QE-6lW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cf7-Hd-9Ti" secondAttribute="trailing" constant="20" id="IDp-qd-iKN"/>
+                                    <constraint firstItem="Cf7-Hd-9Ti" firstAttribute="centerX" secondItem="2u1-RV-sLQ" secondAttribute="centerX" id="KbO-c0-Zdd"/>
+                                    <constraint firstItem="y6f-PG-hLW" firstAttribute="top" secondItem="Cf7-Hd-9Ti" secondAttribute="bottom" constant="20" id="aXB-2x-9OY"/>
+                                    <constraint firstItem="Cf7-Hd-9Ti" firstAttribute="centerY" secondItem="2u1-RV-sLQ" secondAttribute="centerY" multiplier="0.9" id="hFI-On-shE"/>
+                                </constraints>
+                                <size key="customSize" width="375" height="225"/>
+                            </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="udm-JU-wgA" id="vlk-oZ-Kgy"/>
-                            <outlet property="delegate" destination="udm-JU-wgA" id="0Te-20-DOt"/>
-                        </connections>
                     </collectionView>
                     <connections>
                         <outlet property="typedView" destination="MPh-hb-8E4" id="58M-Eg-cPz"/>
@@ -101,6 +142,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="udm-JU-wgA" customClass="LoadingDataSource" customModule="CampaignBrowser" customModuleProvider="target"/>
+                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="loadingIndicatorCell" id="Ocb-lO-iVE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="s1j-ks-uEb">
+                                <rect key="frame" x="169" y="94.5" width="37" height="37"/>
+                                <color key="color" red="0.32549019610000002" green="0.68627450980000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                    </view>
+                    <constraints>
+                        <constraint firstItem="s1j-ks-uEb" firstAttribute="centerY" secondItem="Ocb-lO-iVE" secondAttribute="centerY" id="bmK-KV-awv"/>
+                        <constraint firstItem="s1j-ks-uEb" firstAttribute="centerX" secondItem="Ocb-lO-iVE" secondAttribute="centerX" id="v4T-Kv-6oC"/>
+                    </constraints>
+                    <size key="customSize" width="375" height="225"/>
+                </collectionViewCell>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
